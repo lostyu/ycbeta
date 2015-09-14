@@ -1,0 +1,61 @@
+/* 商品 */
+.mod-goodsItem{
+
+  .pic{ display: block;}
+  .pic+.info{ margin-top: 5px;}
+  .info {
+    .title{
+      color: @c-coffe;
+    }
+    .subTitle{
+//      margin-bottom: 10px;
+      font-size: @fs-small;
+      color: @c-gray;
+    }
+    .price{
+      font-size: @fs-large-x;
+      color: @c-green-dark;
+    }
+  }
+
+  .mod-card{
+//    border: 1px solid @c-green-dark;
+//    border-radius: 3px;
+    box-shadow: 0 0 2px darken(@c-gray,10%);
+    .info{
+      padding: 10px;
+      .title{
+        font-size: @fs-large-x;
+      }
+    }
+  }
+}
+
+/* 卡片模块 */
+.mod-card{
+  margin: 10px;
+  background-color: @c-white;
+}
+
+/* footerbar */
+.mod-footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding: 5px 10px;
+  border-top: 1px solid darken(@c-coffe,10%);
+  background-color: @c-coffe;
+  color: @c-yellow;
+
+  .total{
+    font-size: @fs-large;
+    line-height: 36px;
+  }
+  .btn-cart{
+    line-height: 36px;
+    min-height: inherit;
+    float: right;
+  }
+}
