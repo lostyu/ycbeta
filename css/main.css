@@ -829,6 +829,7 @@ i {
 }
 .scroll-content {
   position: absolute;
+  z-index: 10;
   top: 0;
   right: 0;
   bottom: 0;
@@ -844,6 +845,9 @@ i {
 .scroll-content.has-footer {
   bottom: 50px;
 }
+.scroll-content.has-header {
+  top: 45px;
+}
 .badge {
   background-color: transparent;
   color: #ffffff;
@@ -855,7 +859,7 @@ i {
   vertical-align: baseline;
   text-align: center;
   white-space: nowrap;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 10px;
   line-height: 12px;
 }
@@ -892,9 +896,27 @@ i {
   margin: 10px;
   background-color: #ffffff;
 }
+/* header */
+.mod-header {
+  position: relative;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 44px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #332310;
+  background-color: #593d1d;
+  color: #ffeb9c;
+}
+.mod-header .title {
+  line-height: 33px;
+  font-size: 18px;
+}
 /* footerbar */
 .mod-footer {
   position: fixed;
+  z-index: 20;
   bottom: 0;
   left: 0;
   right: 0;
@@ -906,11 +928,20 @@ i {
 }
 .mod-footer .total {
   font-size: 16px;
-  line-height: 36px;
+  line-height: 38px;
+}
+.mod-footer .total i {
+  font-size: 18px;
 }
 .mod-footer .btn-cart {
+  position: relative;
   line-height: 36px;
   min-height: inherit;
   float: right;
+}
+.mod-footer .btn-cart .badge {
+  top: -5px;
+  right: -5px;
+  position: absolute;
 }
 /* 模块 */
