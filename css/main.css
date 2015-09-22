@@ -824,6 +824,18 @@ i {
 }
 /* flex布局 */
 /* 通用样式 */
+.bg-white {
+  background-color: #ffffff;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.p10 {
+  padding: 10px;
+}
 .content {
   position: relative;
 }
@@ -848,6 +860,36 @@ i {
 .scroll-content.has-header {
   top: 45px;
 }
+.sideBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 70px;
+  background: #eaeaea;
+}
+.sideBar.has-footer {
+  bottom: 50px;
+}
+.sideBar li {
+  border-bottom: 1px solid #777777;
+}
+.sideBar li a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+}
+.sideBar li.active {
+  position: relative;
+  width: 70px;
+  right: 0;
+  background-color: #ffffff;
+}
+.mainCnt {
+  left: 70px;
+  background-color: #ffffff;
+}
 .badge {
   background-color: transparent;
   color: #ffffff;
@@ -864,38 +906,6 @@ i {
   line-height: 12px;
 }
 /* 通用样式 */
-/* 商品 */
-.mod-goodsItem .pic {
-  display: block;
-}
-.mod-goodsItem .pic + .info {
-  margin-top: 5px;
-}
-.mod-goodsItem .info .title {
-  color: #593d1d;
-}
-.mod-goodsItem .info .subTitle {
-  font-size: 12px;
-  color: #777777;
-}
-.mod-goodsItem .info .price {
-  font-size: 18px;
-  color: #536a01;
-}
-.mod-goodsItem .mod-card {
-  box-shadow: 0 0 2px #5e5e5e;
-}
-.mod-goodsItem .mod-card .info {
-  padding: 10px;
-}
-.mod-goodsItem .mod-card .info .title {
-  font-size: 18px;
-}
-/* 卡片模块 */
-.mod-card {
-  margin: 10px;
-  background-color: #ffffff;
-}
 /* header */
 .mod-header {
   position: relative;
@@ -927,7 +937,6 @@ i {
   color: #e0be60;
 }
 .mod-footer .total {
-  font-size: 16px;
   line-height: 38px;
 }
 .mod-footer .total i {
@@ -943,5 +952,100 @@ i {
   top: -5px;
   right: -5px;
   position: absolute;
+}
+/* 商品 */
+.mod-goodsItem {
+  background-color: #ffffff;
+  padding: 0 5px;
+}
+.mod-goodsItem .row {
+  border-bottom: 1px solid #eaeaea;
+}
+.mod-goodsItem .pic {
+  display: block;
+}
+.mod-goodsItem .pic + .info {
+  margin-top: 5px;
+}
+.mod-goodsItem .info {
+  position: relative;
+}
+.mod-goodsItem .info .title {
+  position: relative;
+  font-size: 12px;
+  color: #593d1d;
+  margin-bottom: 15px;
+}
+.mod-goodsItem .info .title h2 {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mod-goodsItem .info .title.has-edit h2 {
+  padding-right: 40px;
+}
+.mod-goodsItem .info .title .edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mod-goodsItem .info .subTitle {
+  font-size: 12px;
+  color: #777777;
+}
+.mod-goodsItem .info .price {
+  font-size: 14px;
+  color: #536a01;
+}
+.mod-goodsItem .info .price2 {
+  margin-left: 5px;
+  font-size: 12px;
+  color: #777777;
+  text-decoration: line-through;
+}
+.mod-goodsItem .info .ft {
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+}
+.mod-goodsItem .info .ft .mod-goodsCount {
+  position: absolute;
+  right: 0;
+}
+.mod-goodsItem .mod-card {
+  box-shadow: 0 0 2px #5e5e5e;
+}
+.mod-goodsItem .mod-card .info {
+  padding: 10px;
+}
+.mod-goodsItem .mod-card .info .title {
+  font-size: 18px;
+}
+/* 商品数量加减 */
+.mod-goodsCount {
+  display: inline-block;
+  overflow: hidden;
+}
+.mod-goodsCount.show span {
+  display: block;
+}
+.mod-goodsCount span {
+  display: none;
+  float: left;
+  width: 30px;
+  line-height: 30px;
+  border: 1px solid #777777;
+  border-width: 1px 0 1px 1px;
+  text-align: center;
+}
+.mod-goodsCount span a {
+  display: block;
+}
+.mod-goodsCount span:last-child {
+  border-right: 1px solid #777777;
+}
+.mod-goodsCount .plus {
+  display: block;
 }
 /* 模块 */
