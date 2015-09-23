@@ -1,31 +1,32 @@
-/* bar */
-.bar.bar-coffe {
-  border-color: #e0be60;
-  background-color: #593d1d;
-  color: #ffeb9c;
+/* 订单详情 */
+.orderDetail{
+  padding: 5px;
+  background-color: @white;
 
-  &.bar-footer{
-    background-color: #593d1d;
+  table{
+    width: 100%;
+    font-size: @font-size-small;
+    text-align: center;
+
+    .c1{width: 108px;}
+    .c2{width: 90px;}
+    .c3{width: 70px;}
+    .c4{width: 42px;}
+
+    thead th{
+      padding: 5px 0;
+      font-weight: 500;
+    }
+    tbody{
+      font-size: @font-size-small;
+
+      td{
+        padding: 10px 0;
+        border-top: 1px solid @gray-lighter;
+      }
+      .cpName{
+        padding-right: 10px;
+      }
+    }
   }
-  .title{color: #ffeb9c;}
-}
-
-
-/* color */
-.coffe, a.coffe {
-  color: #593d1d; }
-
-.coffe-bg {
-  background-color: #593d1d; }
-
-.coffe-border {
-  border-color: #593d1d; }
-
-
-/* content */
-.scroll-content{
-  overflow-y: auto;
-}
-.has-tabs-bottom{
-  bottom: 49px;
 }
