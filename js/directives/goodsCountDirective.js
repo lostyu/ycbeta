@@ -9,7 +9,7 @@ define(['./module'], function (module) {
             templateUrl: 'tpls/directive/goodsCountDirective.html',
             link: function (scope, element, attrs) {
                 scope.num = attrs.num;
-
+                console.log(cartService);
                 scope.plus = function() {
                     scope.num++;
                     cartService.plusGoods();
@@ -18,6 +18,7 @@ define(['./module'], function (module) {
                 scope.minus = function() {
                     if(scope.num >= 1){
                         scope.num--;
+                        cartService.minusGoods();
                     }
                 };
             }
