@@ -1,4 +1,4 @@
 define([
-	'./testCtrl',
-	'./indexCtrl'
+	'./goodsCtrl',
+	'./orderCtrl'
 ]);

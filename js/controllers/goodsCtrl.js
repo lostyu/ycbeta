@@ -1,5 +1,5 @@
 define(['./module'], function(module) {
-	module.controller('indexCtrl', function($scope) {
+	module.controller('goodsCtrl', function($scope) {
 		$scope.title = 'index';
 	});
 });

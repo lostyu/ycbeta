@@ -1062,6 +1062,10 @@ i {
   }
 }
 /* flex布局 */
+html,
+body {
+  background-color: #eeeeee;
+}
 .bg1 {
   background-color: #ffffff;
 }
