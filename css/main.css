@@ -579,20 +579,46 @@ img {
 i {
   font-style: normal;
 }
+.text-muted {
+  color: #777777 !important;
+}
+.text-primary {
+  color: #337ab7 !important;
+}
+.text-success {
+  color: #5cb85c !important;
+}
+.text-info {
+  color: #5bc0de !important;
+}
+.text-warning {
+  color: #f0ad4e !important;
+}
+.text-danger {
+  color: #d9534f !important;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
 /* 排版 */
 /* button按钮样式 */
 .button {
-  border-color: #b2b2b2;
   background-color: #f8f8f8;
   color: #444;
   position: relative;
   display: inline-block;
-  margin: 0;
   padding: 0 12px;
   min-width: 52px;
   min-height: 47px;
   border-width: 1px;
   border-style: solid;
+  border-color: #b2b2b2;
   border-radius: 2px;
   vertical-align: top;
   text-align: center;
@@ -632,6 +658,10 @@ i {
   min-height: 59px;
   font-size: 20px;
   line-height: 53px;
+}
+.button.button-block {
+  display: block;
+  text-align: center;
 }
 .button.button-primary {
   background-color: #337ab7;
@@ -678,6 +708,33 @@ i {
   line-height: 12px;
 }
 /* badge */
+/* list列表样式 */
+.list .item {
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+.list1 .item {
+  padding: 0;
+  margin-bottom: 15px;
+}
+.list1 .hd {
+  position: relative;
+  border-bottom: 1px solid #eeeeee;
+  padding: 5px 10px;
+  line-height: 30px;
+}
+.list1 .hd span {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 12px;
+}
+.list1 .bd p {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+/* list */
 /**
  * Grid
  * --------------------------------------------------
@@ -1260,5 +1317,24 @@ i {
 }
 .orderDetail table tbody .cpName {
   padding-right: 10px;
+}
+.orderDetail table tfoot td {
+  padding: 5px 0;
+  border-top: 1px solid #eeeeee;
+}
+/* 提示页 */
+.message {
+  padding: 10px;
+  text-align: center;
+}
+.message .pic {
+  margin-bottom: 20px;
+}
+.message h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.message p {
+  margin-bottom: 20px;
 }
 /* 站点样式 */

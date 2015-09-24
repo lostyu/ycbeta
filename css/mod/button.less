@@ -1,16 +1,15 @@
 /* button按钮样式 */
 .button {
-  border-color: #b2b2b2;
   background-color: #f8f8f8;
   color: #444;
   position: relative;
   display: inline-block;
-  margin: 0;
   padding: 0 12px;
   min-width: 52px;
   min-height: 47px;
   border-width: 1px;
   border-style: solid;
+  border-color: #b2b2b2;
   border-radius: 2px;
   vertical-align: top;
   text-align: center;
@@ -50,6 +49,10 @@
     font-size: 20px;
     line-height: 53px;
   }
+  &.button-block{
+    display: block;
+    text-align: center;
+  }
 
 
   &.button-primary{
@@ -78,26 +81,6 @@
     border-color: darken(@brand-danger,10%);
   }
 
-//  &.button-yellow{
-//    background-color: @c-yellow;
-//    color: @c-white;
-//    border-color: darken(@c-yellow,10%);
-//  }
-//  &.button-yellow-light{
-//    background-color: @c-yellow-light;
-//    color: @c-coffe;
-//    border-color: darken(@c-yellow-light,10%);
-//  }
-//  &.button-green{
-//    background-color: @c-green;
-//    color: @c-white;
-//    border-color: darken(@c-green,10%);
-//  }
-//  &.button-green-dark{
-//    background-color: @c-green-dark;
-//    color: @c-white;
-//    border-color: darken(@c-green-dark,10%);
-//  }
 
   .badge{
     background-color: @brand-danger;
