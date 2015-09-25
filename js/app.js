@@ -1,6 +1,7 @@
 define([
 	'angular',
 	'angular-ui-route',
+	'angular-touch',
 
 	'./controllers/index',
 	'./directives/index',
@@ -8,6 +9,7 @@ define([
 ], function(ng) {
 	return ng.module('app', [
 		'ui.router',
+        'ngTouch',
 		
 		'app.controllers',
 		'app.directives',

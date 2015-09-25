@@ -8,17 +8,23 @@ define(['./module'], function (module) {
             },
             templateUrl: 'tpls/directive/goodsCountDirective.html',
             link: function (scope, element, attrs) {
-                scope.num = attrs.num;
-                console.log(cartService);
-                scope.plus = function() {
-                    scope.num++;
-                    cartService.plusGoods();
+                scope.num = attrs.num || 0;
+
+                scope.plus = function(gid) {
+                    if(scope.num <= 0){
+                        scope.num++;
+                        cartService.addGoods(gid)
+                    }else{
+                        scope.num++;
+                        cartService.plus(gid);
+                    }
+
                 };
 
-                scope.minus = function() {
+                scope.minus = function(gid) {
                     if(scope.num >= 1){
                         scope.num--;
-                        cartService.minusGoods();
+                        cartService.minus(gid);
                     }
                 };
             }
