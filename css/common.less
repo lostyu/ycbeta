@@ -1,9 +1,30 @@
-html, body{
-  background-color: @gray-lighter;
-}
+/*站点变量*/
+@c-1:   #ff644e;
+@c-2:   #3f3f3f;
+@c-3:   #939393;
+@c-4:   #ffb449;
 
-.bg1{ background-color: #fff}
-.bg2{ background-color: @gray-lighter;}
+
+.button-1{
+  background-color: @c-4;
+  color: #fff;
+  border-color: darken(@c-4, 30%);
+}
+.button-2{
+  background-color: #d9d9d9;
+  color: #807f7f;
+  border-color: darken(#d9d9d9, 30%);
+}
+.icon-bz{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/icon/icon-bz.png) center no-repeat;
+  background-size: 24px 24px;
+  &.active{
+    background-image: url(../img/icon/icon-bz-h.png);
+  }
+}
 
 .scroll-content {
   position: absolute;
@@ -33,28 +54,37 @@ html, body{
   top: 0;
   bottom: 0;
   width: 70px;
-//  border-right: 1px solid @c-gray-light;
-  background: @gray-lighter;
+  background-color: #eeeeee;
   &.has-footer {
     bottom: 50px;
   }
+  ul{
+    border-right:1px solid #e0e0e0;
+  }
   li{
-    border-bottom: 1px solid @gray-light;
+    background-color: #eee;
+    border-bottom: 1px solid #e0e0e0;
     a{
       display: block;
-      padding: 10px 0;
+      padding: 14px 0;
       text-align: center;
       font-size: @font-size-small;
+      color: #3f3f3f;
+      &:active{
+        background-color: @c-1;
+        color: #fff;
+      }
     }
     &.active{
       position: relative;
       width: 70px;
       right: 0;
-//      border-right: 1px solid red;
+      border-right: 1px solid #fff;
+      border-left: 2px solid @c-1;
       background-color: @body-bg;
     }
     &.active a{
-      color: @brand-danger;
+      color: @c-1;
     }
   }
 }

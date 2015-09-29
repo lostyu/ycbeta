@@ -1,11 +1,15 @@
-<div class="scroll-content has-footer">
+<div ui-view="list">
+    <div class="scroll-content has-footer">
 
-    <div class="bg1 f-mb15 f-p10">
-        亲爱的 XX ，请核对您的菜品
-        （如有特殊需求，请注意填写备注哦！）<a href="javascript:location.reload();">刷新</a>
+    <div class="mod-tipsBox">
+        <div class="inner">
+        亲爱的 XX ，请核对您的菜品<br />
+        <span class="text-muted">（如有特殊需求，请注意填写备注哦！）</span><a href="javascript:location.reload();">刷新</a>
+        </div>
     </div>
 
-    <div class="orderDetail f-mb15">
+
+    <div class="orderDetail">
         <table>
             <thead>
                 <tr>
@@ -26,7 +30,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz active" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -38,7 +44,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -50,7 +58,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -62,7 +72,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -74,7 +86,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -86,7 +100,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -98,7 +114,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -110,7 +128,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -122,7 +142,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="cpName">双球冰淇淋（香草、抹茶、巧克力）</td>
@@ -134,7 +156,9 @@
                         </div>
                     </td>
                     <td>￥3600</td>
-                    <td></td>
+                    <td>
+                        <a class="bz icon-bz" href="javascript:;"></a>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -142,9 +166,33 @@
 
 </div>
 
+    <!-- 底部样式1 -->
+    <div class="mod-footer fixed">
+        <div class="total"><span class="badge">1</span>￥<i>35</i></div>
+        <a class="btn-cart button button-1" ui-sref="order">提交订单</a>
+    </div>
 
-<div class="mod-footer fixed">
-    <span class="total">总计：￥<i>368</i></span>
-    <a class="btn-cart button button-danger" ui-sref="orderPay">提交订单<i class="badge">10</i></a>
+
 </div>
 
+
+
+
+
+
+
+
+
+<div ui-view="bz">
+    <!-- 添加备注 -->
+    <div class="scroll-content mod-bz">
+        <div class="hd">
+            添加备注
+        </div>
+        <div class="bd">
+            <textarea></textarea>
+        </div>
+
+
+    </div>
+</div>

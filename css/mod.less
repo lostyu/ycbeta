@@ -23,9 +23,9 @@
 
   height: 50px;
   padding: 5px 10px;
-  border-top: 1px solid darken(@gray-light, 10%);
-  background-color: @body-bg;
-  color: @gray-light;
+  border-top: 1px solid darken(@c-1, 10%);
+  background-color: @c-1;
+  color: #fff;
 
   &.fixed{
     position: fixed;
@@ -35,9 +35,17 @@
     right: 0;
   }
   .total {
-    color: @brand-danger;
+    position: relative;
+    padding-left: 40px;
+    float: left;
     line-height: 38px;
-
+    background: url(../img/icon/icon-cart.png) left center no-repeat;
+    background-size: 32px 32px;
+    .badge{
+      position: absolute;
+      left: 20px;
+      background-color: @c-4;
+    }
     i {
       font-size: @font-size-large-x;
     }
@@ -62,7 +70,7 @@
   background-color: @body-bg;
   padding: 0 5px;
   .row {
-    border-bottom: 1px solid @gray-light;
+    border-bottom: 1px solid #e0e0e0;
   }
   .pic {
     display: block;
@@ -99,12 +107,12 @@
     }
     .price {
       font-size: @font-size-base;
-      color: @brand-danger;
+      color: @c-1;
     }
     .price2{
       margin-left: 5px;
       font-size: @font-size-small;
-      color: @gray-light;
+      color: @c-3;
       text-decoration: line-through;
     }
     .ft {
@@ -133,7 +141,7 @@
 
 
 /* 商品数量加减 */
-.mod-goodsCount{
+.mod-goodsCount {
   display: inline-block;
   overflow: hidden;
   &.show span{
@@ -149,25 +157,57 @@
     a{
       display: block;
       &:active{
-        color: red;
+        color: #000;
       }
     }
   }
-  span:last-child{
-    border-right: 1px solid @gray-light;
-  }
+
   .minus{
-    border: 1px solid @gray-light;
+    border: 1px solid @c-1;
     border-radius: 50%;
     font-size: @font-size-large;
-    a{color: @brand-danger;}
+    background-color: #fff;
+    a{
+      color: @c-1;
+      &:active{
+        color: #000;
+      }
+    }
   }
   .num{}
   .plus{
     display: block;
-    border: 1px solid @gray-light;
+    border: 1px solid @c-1;
     border-radius: 50%;
     font-size: @font-size-large;
-    a{color: @brand-danger;}
+    background-color: @c-1;
+    a{color: #fff;}
+  }
+}
+
+
+
+/* 提示信息 */
+.mod-tipsBox{
+  margin: 20px 0;
+  background: url(../img/bg/bg-line.png) left bottom repeat-x;
+  background-size: 100% auto;
+  .inner{
+    padding: 20px 10px;
+    background: url(../img/bg/bg-line.png) left top repeat-x;
+    background-size: 100% auto;
+  }
+}
+
+
+/* 备注 */
+.mod-bz{
+  padding: 10px;
+  background-color: #eee;
+  z-index: 21;
+  .hd{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid @c-3;
   }
 }

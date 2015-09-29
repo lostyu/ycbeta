@@ -6,17 +6,29 @@ define(['./app'], function(app) {
             $stateProvider
                 .state('goods', {
                     url: '/goods',
-                    templateUrl: "tpls/goods.html",
+                    templateUrl: "tpls/goods.html?"+new Date().getTime(),
                     controller: 'goodsCtrl'
                 })
+
+
                 .state('order', {
                     url: '/order',
-                    templateUrl: "tpls/order.html",
+                    templateUrl: "tpls/order.html?"+new Date().getTime(),
                     controller: 'orderCtrl'
                 })
+                .state('order.bz', {
+                    views: {
+                        'bz@order': {
+
+                        }
+                    }
+
+                })
+
+
                 .state('orderPay', {
                     url: '/orderPay',
-                    templateUrl: "tpls/order-pay.html"
+                    templateUrl: "tpls/order-pay.html?"+new Date().getTime()
 
                 })
                 // .state('goods', {

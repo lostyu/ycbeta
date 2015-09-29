@@ -1,5 +1,5 @@
 define(['./module'], function (module) {
-    module.directive('goodsCount', ['cartService', function (cartService) {
+    module.directive('goodsCount', function () {
         return{
             restrict: 'EA',
             replace: true,
@@ -8,26 +8,10 @@ define(['./module'], function (module) {
             },
             templateUrl: 'tpls/directive/goodsCountDirective.html',
             link: function (scope, element, attrs) {
-                scope.num = attrs.num || 0;
+                scope.num = attrs.num;
 
-                scope.plus = function(gid) {
-                    if(scope.num <= 0){
-                        scope.num++;
-                        cartService.addGoods(gid)
-                    }else{
-                        scope.num++;
-                        cartService.plus(gid);
-                    }
 
-                };
-
-                scope.minus = function(gid) {
-                    if(scope.num >= 1){
-                        scope.num--;
-                        cartService.minus(gid);
-                    }
-                };
             }
         }
-    }]);
+    });
 });

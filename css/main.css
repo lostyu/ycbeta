@@ -1062,15 +1062,26 @@ i {
   }
 }
 /* flex布局 */
-html,
-body {
-  background-color: #eeeeee;
+/*站点变量*/
+.button-1 {
+  background-color: #ffb449;
+  color: #fff;
+  border-color: #af6700;
 }
-.bg1 {
-  background-color: #ffffff;
+.button-2 {
+  background-color: #d9d9d9;
+  color: #807f7f;
+  border-color: #8d8d8d;
 }
-.bg2 {
-  background-color: #eeeeee;
+.icon-bz {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/icon/icon-bz.png) center no-repeat;
+  background-size: 24px 24px;
+}
+.icon-bz.active {
+  background-image: url(../img/icon/icon-bz-h.png);
 }
 .scroll-content {
   position: absolute;
@@ -1099,28 +1110,39 @@ body {
   top: 0;
   bottom: 0;
   width: 70px;
-  background: #eeeeee;
+  background-color: #eeeeee;
 }
 .sideBar.has-footer {
   bottom: 50px;
 }
+.sideBar ul {
+  border-right: 1px solid #e0e0e0;
+}
 .sideBar li {
-  border-bottom: 1px solid #777777;
+  background-color: #eee;
+  border-bottom: 1px solid #e0e0e0;
 }
 .sideBar li a {
   display: block;
-  padding: 10px 0;
+  padding: 14px 0;
   text-align: center;
   font-size: 12px;
+  color: #3f3f3f;
+}
+.sideBar li a:active {
+  background-color: #ff644e;
+  color: #fff;
 }
 .sideBar li.active {
   position: relative;
   width: 70px;
   right: 0;
+  border-right: 1px solid #fff;
+  border-left: 2px solid #ff644e;
   background-color: #ffffff;
 }
 .sideBar li.active a {
-  color: #d9534f;
+  color: #ff644e;
 }
 .mainCnt {
   left: 70px;
@@ -1148,9 +1170,9 @@ body {
 .mod-footer {
   height: 50px;
   padding: 5px 10px;
-  border-top: 1px solid #5e5e5e;
-  background-color: #ffffff;
-  color: #777777;
+  border-top: 1px solid #ff371b;
+  background-color: #ff644e;
+  color: #fff;
 }
 .mod-footer.fixed {
   position: fixed;
@@ -1160,8 +1182,17 @@ body {
   right: 0;
 }
 .mod-footer .total {
-  color: #d9534f;
+  position: relative;
+  padding-left: 40px;
+  float: left;
   line-height: 38px;
+  background: url(../img/icon/icon-cart.png) left center no-repeat;
+  background-size: 32px 32px;
+}
+.mod-footer .total .badge {
+  position: absolute;
+  left: 20px;
+  background-color: #ffb449;
 }
 .mod-footer .total i {
   font-size: 18px;
@@ -1183,7 +1214,7 @@ body {
   padding: 0 5px;
 }
 .mod-goodsItem .row {
-  border-bottom: 1px solid #777777;
+  border-bottom: 1px solid #e0e0e0;
 }
 .mod-goodsItem .pic {
   display: block;
@@ -1220,12 +1251,12 @@ body {
 }
 .mod-goodsItem .info .price {
   font-size: 14px;
-  color: #d9534f;
+  color: #ff644e;
 }
 .mod-goodsItem .info .price2 {
   margin-left: 5px;
   font-size: 12px;
-  color: #777777;
+  color: #939393;
   text-decoration: line-through;
 }
 .mod-goodsItem .info .ft {
@@ -1265,30 +1296,58 @@ body {
 .mod-goodsCount span a {
   display: block;
 }
-.mod-goodsCount span:last-child {
-  border-right: 1px solid #777777;
+.mod-goodsCount span a:active {
+  color: #000;
 }
 .mod-goodsCount .minus {
-  border: 1px solid #777777;
+  border: 1px solid #ff644e;
   border-radius: 50%;
   font-size: 16px;
+  background-color: #fff;
 }
 .mod-goodsCount .minus a {
-  color: #d9534f;
+  color: #ff644e;
+}
+.mod-goodsCount .minus a:active {
+  color: #000;
 }
 .mod-goodsCount .plus {
   display: block;
-  border: 1px solid #777777;
+  border: 1px solid #ff644e;
   border-radius: 50%;
   font-size: 16px;
+  background-color: #ff644e;
 }
 .mod-goodsCount .plus a {
-  color: #d9534f;
+  color: #fff;
+}
+/* 提示信息 */
+.mod-tipsBox {
+  margin: 20px 0;
+  background: url(../img/bg/bg-line.png) left bottom repeat-x;
+  background-size: 100% auto;
+}
+.mod-tipsBox .inner {
+  padding: 20px 10px;
+  background: url(../img/bg/bg-line.png) left top repeat-x;
+  background-size: 100% auto;
+}
+/* 备注 */
+.mod-bz {
+  padding: 10px;
+  background-color: #eee;
+  z-index: 21;
+}
+.mod-bz .hd {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #939393;
 }
 /* 站点模块 */
 /* 订单详情 */
 .orderDetail {
-  padding: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
   background-color: #ffffff;
 }
 .orderDetail table {
@@ -1316,11 +1375,13 @@ body {
   font-size: 12px;
 }
 .orderDetail table tbody td {
-  padding: 10px 0;
+  padding: 15px 0;
   border-top: 1px solid #eeeeee;
 }
 .orderDetail table tbody .cpName {
+  padding-left: 10px;
   padding-right: 10px;
+  text-align: left;
 }
 .orderDetail table tfoot td {
   padding: 5px 0;

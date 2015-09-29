@@ -2,9 +2,9 @@ define(['./module'], function (module) {
     module.factory('cartService', function () {
         var service = {};
 
-        service.goods = localStorage.getItem('__CART__') || [];
+        service.goods = JSON.parse(localStorage.getItem('__CART__')) || [];
 
-
+        console.log(service);
         /**
          * 添加商品到购物车
          * @param oGoods    添加商品
@@ -13,9 +13,10 @@ define(['./module'], function (module) {
             var c = this.getGoodsById(gid);
 
             if(!c){
-                this.goods.push(oGoods);
-                this.save();
+                service.goods.push(oGoods);
+                service.save();
             }
+
         };
 
 
@@ -32,6 +33,8 @@ define(['./module'], function (module) {
                 c.num += number;
                 this.save();
             }
+
+            console.log(this.goods);
         };
 
 
@@ -89,9 +92,9 @@ define(['./module'], function (module) {
         service.getGoodsById = function(gid) {
             var result = '';
 
-            Array.prototype.forEach.call(this.goods, function(item) {
+            Array.prototype.forEach.call(this.goods, function(item, index) {
                 if(item.gid == gid){
-                    result = item;
+                    result = service.goods[index];
                     return false;
                 }
             });
@@ -121,7 +124,7 @@ define(['./module'], function (module) {
          */
         service.save = function() {
             var data = angular.copy(this.goods);
-            localStorage.setItem('__CART__', data);
+            localStorage.setItem('__CART__', JSON.stringify(data));
         };
 
         return service;
