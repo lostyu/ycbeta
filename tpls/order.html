@@ -1,5 +1,5 @@
-<div ui-view="list">
-    <div class="scroll-content has-footer">
+
+    <div class="scroll-content has-footer bg-2">
 
     <div class="mod-tipsBox">
         <div class="inner">
@@ -9,7 +9,7 @@
     </div>
 
 
-    <div class="orderDetail">
+    <div class="orderTables">
         <table>
             <thead>
                 <tr>
@@ -31,7 +31,7 @@
                     </td>
                     <td>￥3600</td>
                     <td>
-                        <a class="bz icon-bz active" href="javascript:;"></a>
+                        <a ng-click="toggleDetail();" class="bz icon-bz active" href="javascript:;"></a>
                     </td>
                 </tr>
                 <tr>
@@ -164,35 +164,13 @@
         </table>
     </div>
 
-</div>
+    </div>
 
     <!-- 底部样式1 -->
     <div class="mod-footer fixed">
-        <div class="total"><span class="badge">1</span>￥<i>35</i></div>
-        <a class="btn-cart button button-1" ui-sref="order">提交订单</a>
+        <div class="total"><span ng-if="getCount() > 0" class="badge">{{getCount()}}</span>￥<i>{{getPrice()}}</i></div>
+        <a class="btn-cart button button-1" ui-sref="orderPay">提交订单</a>
     </div>
 
 
-</div>
-
-
-
-
-
-
-
-
-
-<div ui-view="bz">
-    <!-- 添加备注 -->
-    <div class="scroll-content mod-bz">
-        <div class="hd">
-            添加备注
-        </div>
-        <div class="bd">
-            <textarea></textarea>
-        </div>
-
-
-    </div>
-</div>
+<div ui-view="bz" ng-if="showDetail"></div>

@@ -4,19 +4,25 @@ define(['./module'], function (module) {
 
         service.goods = JSON.parse(localStorage.getItem('__CART__')) || [];
 
-        console.log(service);
         /**
-         * 添加商品到购物车
-         * @param oGoods    添加商品
+         * 同步购物车商品数据
+         * @param goods 商品数组
          */
-        service.addGoods = function(gid, oGoods) {
-            var c = this.getGoodsById(gid);
+        service.syncData = function(goods) {
+            var result = [];
 
-            if(!c){
-                service.goods.push(oGoods);
-                service.save();
-            }
+            goods.forEach(function(item) {
 
+                service.goods.forEach(function(item2) {
+                    if(item.gid == item2.gid){
+                        item.num = item2.num;
+                        this.push(item);
+                    }
+                }, result);
+
+            });
+
+            service.goods = angular.copy(result);
         };
 
 
@@ -25,12 +31,17 @@ define(['./module'], function (module) {
          * @param gid       商品id
          * @param number    默认加1
          */
-        service.plus = function(gid, number) {
+        service.plus = function(gid, number, oGoods) {
             var c = this.getGoodsById(gid);
             number = number || 1;
 
             if(c){
                 c.num += number;
+                this.save();
+            }else{
+                var _g = oGoods;
+                _g.num++;
+                this.goods.push(_g);
                 this.save();
             }
 
@@ -49,6 +60,7 @@ define(['./module'], function (module) {
 
             if(c){
                 if(c.num - number <= 0){
+                    c.num -= number;
                     this.remove(gid);
                 }else{
                     c.num -= number;

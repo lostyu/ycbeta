@@ -1,52 +1,38 @@
 define(['./module'], function(module) {
-	module.controller('goodsCtrl', ['$scope', 'cartService', function($scope, cartService) {
-		$scope.title = 'index';
+	module.controller('goodsCtrl', [
+        '$scope', 'cartService', '$http', function($scope, cartService, $http) {
 
-        $scope.goods = [
-            {
-                "gid": "01",
-                "title": "1双球冰淇淋（香草、抹茶、巧克力）",
-                "price": 28,
-                "originPrice": 58,
-                "num": 0
-            },
-            {
-                "gid": "02",
-                "title": "222双球冰淇淋（香草、抹茶、巧克力）",
-                "price": 38,
-                "originPrice": 48,
-                "num": 0
-            },
-            {
-                "gid": "03",
-                "title": "333双球冰淇淋（香草、抹茶、巧克力）",
-                "price": 18,
-                "num": 0
-            }
-        ];
+		$scope.title = '商品列表';
+
+        $scope.goods = [];
+
+        // 设置标题
+        document.title = $scope.title;
+
+        // 切换菜单
+        $scope.changeMenu = function(url) {
+            $http.get('tpls/'+url+'.json').
+                success(function(data, status, headers, config) {
+                    $scope.goods = data;
+                    // 同步购物车商品数量
+                    cartService.syncData($scope.goods);
+                }).
+                error(function(data, status, headers, config) {
+
+                });
+        };
+        $scope.changeMenu('menu1');
 
 
-        $scope.goods.forEach(function(item) {
-            cartService.goods.forEach(function(item2) {
-                if(item.gid == item2.gid){
-                    angular.extend({}, item, item2);
-                }
-            })
-        });
 
-        $scope.getGoodsById = function(gid) {
-            var result = null;
 
-            $scope.goods.forEach(function(item) {
-                if(item.gid == gid){
-                    result = item;
-                    return false;
-                }
-            });
+        $scope.getCount = function() {
+            return cartService.getCount();
+        };
 
-            return result;
-        }
-
+        $scope.getPrice = function() {
+            return cartService.getPrice();
+        };
 
 	}]);
 });

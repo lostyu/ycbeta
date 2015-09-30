@@ -1063,6 +1063,9 @@ i {
 }
 /* flex布局 */
 /*站点变量*/
+.bg-2 {
+  background-color: #ededed;
+}
 .button-1 {
   background-color: #ffb449;
   color: #fff;
@@ -1324,7 +1327,7 @@ i {
 /* 提示信息 */
 .mod-tipsBox {
   margin: 20px 0;
-  background: url(../img/bg/bg-line.png) left bottom repeat-x;
+  background: #ffffff url(../img/bg/bg-line.png) left bottom repeat-x;
   background-size: 100% auto;
 }
 .mod-tipsBox .inner {
@@ -1340,51 +1343,74 @@ i {
 }
 .mod-bz .hd {
   padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #939393;
+  margin-bottom: 15px;
+  line-height: 35px;
+  border-bottom: 1px solid #d6d6d6;
+  color: #8b8b8b;
+}
+.mod-bz .hd .back {
+  float: left;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon/icon-arrow-l.png) left center no-repeat;
+  background-size: 24px auto;
+}
+.mod-bz .hd .btn {
+  float: right;
+  height: 35px;
+  color: #8b8b8b;
+}
+.mod-bz .bd textarea {
+  width: 100%;
+  padding: 10px;
+  min-height: 100px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 12px;
 }
 /* 站点模块 */
 /* 订单详情 */
-.orderDetail {
+.orderTables {
   margin-bottom: 20px;
   border-bottom: 1px solid #eeeeee;
   background-color: #ffffff;
 }
-.orderDetail table {
+.orderTables table {
   width: 100%;
   font-size: 12px;
   text-align: center;
 }
-.orderDetail table .c1 {
+.orderTables table .c1 {
   width: 108px;
 }
-.orderDetail table .c2 {
+.orderTables table .c2 {
   width: 90px;
 }
-.orderDetail table .c3 {
+.orderTables table .c3 {
   width: 70px;
 }
-.orderDetail table .c4 {
+.orderTables table .c4 {
   width: 42px;
 }
-.orderDetail table thead th {
-  padding: 5px 0;
+.orderTables table thead th {
+  padding: 10px 0;
   font-weight: 500;
 }
-.orderDetail table tbody {
+.orderTables table tbody {
   font-size: 12px;
 }
-.orderDetail table tbody td {
+.orderTables table tbody td {
   padding: 15px 0;
   border-top: 1px solid #eeeeee;
 }
-.orderDetail table tbody .cpName {
+.orderTables table tbody .cpName {
   padding-left: 10px;
   padding-right: 10px;
   text-align: left;
 }
-.orderDetail table tfoot td {
-  padding: 5px 0;
+.orderTables table tfoot td {
+  padding: 10px 0;
   border-top: 1px solid #eeeeee;
 }
 /* 提示页 */
@@ -1401,5 +1427,34 @@ i {
 }
 .message p {
   margin-bottom: 20px;
+}
+/* 订单支付页 */
+.orderPay .mod-tipsBox {
+  background-color: #fff;
+}
+.orderPay .mod-tipsBox .inner {
+  padding: 1px;
+}
+.orderPay ul {
+  padding: 0 10px;
+}
+.orderPay ul li {
+  padding: 15px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.orderPay ul li:last-child {
+  border-bottom: none;
+}
+/* 订单列表 */
+.orderList .list1 .hd {
+  border-top: 1px solid #eeeeee;
+}
+/* 订单详细 */
+.orderDetailView .mod-tipsBox .inner {
+  padding: 1px 0;
+}
+.orderDetailView .list1 .item {
+  margin-bottom: 0;
+  border-bottom: none;
 }
 /* 站点样式 */

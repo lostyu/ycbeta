@@ -1,0 +1,36 @@
+[
+    {
+        "gid": "01",
+        "title": "1双球冰淇淋（香草、抹茶、巧克力）",
+        "price": 28,
+        "originPrice": 58,
+        "num": 0
+    },
+    {
+        "gid": "02",
+        "title": "444双球冰淇淋（香草、抹茶、巧克力）",
+        "price": 18,
+        "num": 0,
+        "imgUrl": "img/coffe1.jpg"
+    },
+    {
+        "gid": "03",
+        "title": "222双球冰淇淋（香草、抹茶、巧克力）",
+        "price": 38,
+        "originPrice": 48,
+        "num": 0
+    },
+    {
+        "gid": "04",
+        "title": "333双球冰淇淋（香草、抹茶、巧克力）",
+        "price": 18,
+        "num": 0
+    },
+    {
+        "gid": "05",
+        "title": "444双球冰淇淋（香草、抹茶、巧克力）",
+        "price": 18,
+        "num": 0,
+        "imgUrl": "img/coffe2.jpg"
+    }
+]
