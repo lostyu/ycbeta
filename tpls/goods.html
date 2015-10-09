@@ -14,12 +14,14 @@
     </div>
 
 
-<div class="scroll-content has-footer mainCnt">
+<div class="scroll-content has-footer mainCnt" lazy-img>
+
+
 
     <div class="mod-goodsItem" ng-repeat="g in goods">
         <div class="row">
             <div class="col col-33" ng-if="g.imgUrl">
-                <img class="pic" ng-src="{{g.imgUrl}}"/>
+                <img big-img="g" class="pic j-lazyImg" ng-src="{{g.imgUrl}}"/>
             </div>
             <div class="col">
 

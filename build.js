@@ -1,6 +1,11 @@
-require.config({
-    urlArgs: 'bust=' +  (new Date()).getTime(),
-    baseUrl: 'js',
+({
+    appDir: './',
+    baseUrl: './js',
+    dir: './dist',
+    fileExclusionRegExp: /^(r|build)\.js$/,
+    optimizeCss: 'standard',
+    removeCombined: true,
+
     paths: {
         'jquery': '../libs/jquery/jquery-1.11.1.min',
 
@@ -25,5 +30,10 @@ require.config({
             deps: ['angular']
         }
     },
-    deps: ['bootstrap']
-});
+
+    modules: [
+        {
+            name: 'bootstrap'
+        }
+    ]
+})

@@ -1151,6 +1151,32 @@ i {
   left: 70px;
   background-color: #ffffff;
 }
+.mask {
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+/* directive */
+.bigImgBox {
+  padding: 20px;
+  color: #fff;
+}
+.bigImgBox img {
+  margin-bottom: 10px;
+}
+.bigImgBox p {
+  margin-bottom: 10px;
+}
+.bigImgBox .des {
+  text-align: left;
+  font-size: 12px;
+  color: #cccccc;
+}
 /* 站点通用样式 */
 /* header */
 .mod-header {
@@ -1368,6 +1394,54 @@ i {
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   font-size: 12px;
+}
+/* dialog */
+.mod-dialogMask {
+  display: block;
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.mod-dialogMask .mod-dialog {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.mod-dialogMask .mod-dialog .inner {
+  padding: 20px;
+}
+.mod-dialogMask .mod-dialog .hd {
+  font-size: 16px;
+  font-weight: 700;
+}
+.mod-dialogMask .mod-dialog .bd {
+  margin-top: 20px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+.mod-dialogMask .mod-dialog .ft {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: right;
+}
+.mod-dialogMask .mod-dialog .ft a {
+  display: inline-block;
+  padding: 6px 10px;
+  color: #5094C5;
+}
+.mod-dialogMask .mod-dialog .promptInput {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 /* 站点模块 */
 /* 订单详情 */

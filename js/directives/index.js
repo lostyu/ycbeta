@@ -1,3 +1,5 @@
 define([
-	'./goodsCountDirective'
+	'./goodsCountDirective',
+	'./bigImgDirective',
+	'./lazyImgDirective'
 ]);

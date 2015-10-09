@@ -1,3 +1,5 @@
 define([
-	'./cartService'
+	'./cartService',
+	'./commonService',
+	'./dialogService'
 ]);

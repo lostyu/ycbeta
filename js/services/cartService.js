@@ -1,5 +1,5 @@
 define(['./module'], function (module) {
-    module.factory('cartService', function () {
+    module.factory('cartService', [function () {
         var service = {};
 
         service.goods = JSON.parse(localStorage.getItem('__CART__')) || [];
@@ -140,5 +140,5 @@ define(['./module'], function (module) {
         };
 
         return service;
-    });
+    }]);
 });

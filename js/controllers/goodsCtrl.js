@@ -1,6 +1,6 @@
 define(['./module'], function(module) {
 	module.controller('goodsCtrl', [
-        '$scope', 'cartService', '$http', function($scope, cartService, $http) {
+        '$scope', '$http', 'cartService', 'dialogService', function($scope, $http, cartService, dialogService) {
 
 		$scope.title = '商品列表';
 
@@ -24,14 +24,18 @@ define(['./module'], function(module) {
         $scope.changeMenu('menu1');
 
 
-
-
         $scope.getCount = function() {
             return cartService.getCount();
         };
 
         $scope.getPrice = function() {
             return cartService.getPrice();
+        };
+
+
+        $scope.show = function() {
+            var dialog = new dialogService.Dialog();
+            dialog.alert();
         };
 
 	}]);
