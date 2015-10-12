@@ -1,23 +1,32 @@
 define(['./module', 'jquery', '../widget'], function (module, $, widget) {
     module.provider('dialogService', [function () {
 
+        var _this = this;
+        _this.myCfg = {
+            title: '提示',
+            content: '请输入内容',
+            text4OkBtn: '确定',
+            text4CancelBtn: '取消',
+            mask4Close: false,
+
+            handler4AlertBtn: null,
+            handler4CloseBtn: null,
+            handler4ConfirmBtn: null,
+            handler4CancelBtn: null,
+            handler4PromptBtn: null,
+
+            promptType: 'text',
+            promptPlaceHolder: '请输入'
+        };
+
+        _this.$get = function() {
+            return{
+                Dialog: Dialog
+            }
+        };
+
         function Dialog(){
-            this.cfg = {
-                title: '提示',
-                content: '请输入内容',
-                text4OkBtn: '确定',
-                text4CancelBtn: '取消',
-                mask4Close: false,
-
-                handler4AlertBtn: null,
-                handler4CloseBtn: null,
-                handler4ConfirmBtn: null,
-                handler4CancelBtn: null,
-                handler4PromptBtn: null,
-
-                promptType: 'text',
-                promptPlaceHolder: '请输入'
-            };
+            this.cfg = _this.myCfg;
         }
 
         Dialog.prototype = $.extend({}, new widget.Widget(), {
@@ -133,12 +142,6 @@ define(['./module', 'jquery', '../widget'], function (module, $, widget) {
                 return this;
             }
         });
-
-        this.$get = function() {
-            return{
-                Dialog: Dialog
-            }
-        };
 
     }]);
 });
