@@ -1,6 +1,6 @@
 define(['./app'], function(app) {
-	return app.config(['$stateProvider', '$urlRouterProvider', 'dialogServiceProvider', 'testServiceProvider',
-        function($stateProvider, $urlRouterProvider, dialogServiceProvider, testServiceProvider) {
+	return app.config(['$stateProvider', '$urlRouterProvider', 'dialogServiceProvider', 'loadingServiceProvider',
+        function($stateProvider, $urlRouterProvider, dialogServiceProvider, loadingServiceProvider) {
             $urlRouterProvider.otherwise("/goods");
 
             $stateProvider
@@ -55,12 +55,14 @@ define(['./app'], function(app) {
                 // })
 
 
-            console.log(dialogServiceProvider);
             dialogServiceProvider.myCfg.title = '提示1';
             dialogServiceProvider.myCfg.content = '请输入内容2';
             dialogServiceProvider.myCfg.text4OkBtn = '确定2';
             dialogServiceProvider.myCfg.text4CancelBtn = '提示1';
             dialogServiceProvider.myCfg.title = '取消2';
+
+
+            loadingServiceProvider.cfg.type = 2;
         }
     ]);
 });

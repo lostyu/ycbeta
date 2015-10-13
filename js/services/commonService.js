@@ -1,29 +1,35 @@
 define(['./module'], function (module) {
     module.factory('commonService', [function () {
-        var common = {};
 
-        common.mask = null;
+        var mask = null;
 
-        common.showMask = function(bClose) {
-            var _this = this;
+        var common = {
+            showMask: function (content, bClose) {
+                var _this = this;
+                content = content || '';
+                bClose = bClose || false;
 
-            if(!this.mask){
-                this.mask = angular.element('<div class="mask">');
-            }
-            angular.element(document.body).append(this.mask);
+                if (!mask) {
+                    mask = angular.element('<div class="mask">');
+                }
+                angular.element(document.body).append(mask);
 
-            if(bClose){
-                this.mask.on('click', function() {
-                    _this.destroyMask();
-                });
+                if(content){
+                    mask.append(content);
+                }
+
+                if (bClose) {
+                    mask.on('click', function () {
+                        _this.hideMask();
+                    });
+                }
+            },
+            hideMask: function () {
+                mask.remove();
+                mask.off();
+                mask.html('');
             }
         };
-        common.destroyMask = function() {
-            this.mask.remove();
-            this.mask.off();
-            this.mask.html('');
-        };
-
 
         return common;
     }]);

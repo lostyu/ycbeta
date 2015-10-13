@@ -1062,7 +1062,180 @@ i {
   }
 }
 /* flex布局 */
+/* dialog */
+.mod-dialogMask {
+  display: block;
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.mod-dialogMask .mod-dialog {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.mod-dialogMask .mod-dialog .inner {
+  padding: 20px;
+}
+.mod-dialogMask .mod-dialog .hd {
+  font-size: 16px;
+  font-weight: 700;
+}
+.mod-dialogMask .mod-dialog .bd {
+  margin-top: 20px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+.mod-dialogMask .mod-dialog .ft {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: right;
+}
+.mod-dialogMask .mod-dialog .ft a {
+  display: inline-block;
+  padding: 6px 10px;
+  color: #5094C5;
+}
+.mod-dialogMask .mod-dialog .promptInput {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+/* dialog */
+/* loading */
+.mod-loadingMask {
+  display: block;
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.mod-loadingMask .mod-loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-align: center;
+}
+.mod-loadingMask .ft {
+  margin-top: 20px;
+  color: #fff;
+}
+/* loading1 */
+.load1 .loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-animation: load1 1.4s infinite linear;
+  animation: load1 1.4s infinite linear;
+  background: url(loading/loading.png) center no-repeat;
+  background-size: cover;
+}
+@-webkit-keyframes load1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* loading2 */
+.load2 .loader {
+  margin: 0 auto;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+}
+.load2 .loader div {
+  background-color: #F8F8FF;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  margin-right: 2px;
+  -webkit-animation: load2 1.2s infinite ease-in-out;
+  animation: load2 1.2s infinite ease-in-out;
+}
+.load2 .loader .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.load2 .loader .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.load2 .loader .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.load2 .loader .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+.load2 .loader .rect6 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+@-webkit-keyframes load2 {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes load2 {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+/* loading */
 /*站点变量*/
+.mmask {
+  display: block;
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .bg-2 {
   background-color: #ededed;
 }
@@ -1152,14 +1325,14 @@ i {
   background-color: #ffffff;
 }
 .mask {
-  position: fixed;
+  display: block;
+  position: absolute;
   z-index: 30;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 /* directive */
 .bigImgBox {
@@ -1394,54 +1567,6 @@ i {
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   font-size: 12px;
-}
-/* dialog */
-.mod-dialogMask {
-  display: block;
-  position: absolute;
-  z-index: 30;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.mod-dialogMask .mod-dialog {
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 50%;
-  border-radius: 2px;
-  background-color: #fff;
-}
-.mod-dialogMask .mod-dialog .inner {
-  padding: 20px;
-}
-.mod-dialogMask .mod-dialog .hd {
-  font-size: 16px;
-  font-weight: 700;
-}
-.mod-dialogMask .mod-dialog .bd {
-  margin-top: 20px;
-  line-height: 1.4;
-  font-size: 14px;
-}
-.mod-dialogMask .mod-dialog .ft {
-  margin-top: 20px;
-  font-size: 14px;
-  text-align: right;
-}
-.mod-dialogMask .mod-dialog .ft a {
-  display: inline-block;
-  padding: 6px 10px;
-  color: #5094C5;
-}
-.mod-dialogMask .mod-dialog .promptInput {
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
 }
 /* 站点模块 */
 /* 订单详情 */

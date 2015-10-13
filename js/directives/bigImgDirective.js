@@ -9,10 +9,9 @@ define(['./module'], function (module) {
 
                 element.bind('click', function() {
                     var _des = scope.bigImg.des == undefined ? '' : '<p class="des">'+scope.bigImg.des+'</p>';
-                    var _img = '<div class="bigImgBox"><img src="'+ scope.bigImg.imgUrl +'" /><p>'+  scope.bigImg.title +'</p>'+_des+'</div>';
+                    var _tpl = '<div class="bigImgBox"><img src="'+ scope.bigImg.imgUrl +'" /><p>'+  scope.bigImg.title +'</p>'+_des+'</div>';
 
-                    commonService.showMask(true);
-                    commonService.mask.append(_img);
+                    commonService.showMask(_tpl, true);
                 });
 
             }

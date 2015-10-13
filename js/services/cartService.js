@@ -1,5 +1,5 @@
 define(['./module'], function (module) {
-    module.service('cartService', [function () {
+    module.factory('cartService', [function () {
         var service = {};
 
         service.goods = JSON.parse(localStorage.getItem('__CART__')) || [];

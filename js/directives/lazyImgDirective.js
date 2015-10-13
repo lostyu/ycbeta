@@ -4,7 +4,7 @@ define(['./module'], function (module) {
             restrict: 'A',
             link: function (scope, element, attrs) {
 
-                console.log(element.find(document.querySelectorAll('.j-lazyImg')));
+                //console.log(element.find(document.querySelectorAll('.j-lazyImg')));
 
                 element.on('scroll', function() {
                     console.log(2);
