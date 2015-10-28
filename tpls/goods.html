@@ -32,9 +32,8 @@
                     <div class="ft">
                         <span class="price">{{g.price | currency:'￥'}}</span> <span ng-if="g.originPrice" class="price2">{{g.originPrice | currency: '￥'}}</span>
 
-                        <goods-count gid="{{g.gid}}" num="{{g.num}}" goods="g"></goods-count>
-
                     </div>
+                    <goods-count gid="{{g.gid}}" num="{{g.num}}" goods="g"></goods-count>
                 </div>
 
             </div>
