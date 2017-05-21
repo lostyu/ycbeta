@@ -1,0 +1,156 @@
+/* header */
+.mod-header {
+  position: relative;
+  z-index: @zindex-middle;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 44px;
+  padding: 5px 10px;
+  border-bottom: 1px solid darken(@c-coffe, 10%);
+  background-color: @c-coffe;
+  color: @c-yellow-light;
+
+  .title {
+    line-height: 33px;
+    font-size: @fs-large-x;
+  }
+}
+
+
+/* footerbar */
+.mod-footer {
+  position: fixed;
+  z-index: @zindex-middle;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding: 5px 10px;
+  border-top: 1px solid darken(@c-coffe, 10%);
+  background-color: @c-coffe;
+  color: @c-yellow;
+
+  .total {
+    line-height: 38px;
+
+    i {
+      font-size: @fs-large-x;
+    }
+  }
+  .btn-cart {
+    position: relative;
+    line-height: 36px;
+    min-height: inherit;
+    float: right;
+
+    .badge {
+      top: -5px;
+      right: -5px;
+      position: absolute;
+    }
+  }
+}
+
+
+/* 商品 */
+.mod-goodsItem {
+  background-color: @c-white;
+  padding: 0 5px;
+  .row {
+    border-bottom: 1px solid @c-gray-light;
+  }
+  .pic {
+    display: block;
+  }
+  .pic + .info {
+    margin-top: 5px;
+  }
+  .info {
+    position: relative;
+    .title {
+      position: relative;
+      font-size: @fs-small;
+      color: @c-coffe;
+      margin-bottom: 15px;
+      h2{
+        overflow:hidden;
+        word-wrap:normal;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+      }
+      &.has-edit h2{
+        padding-right: 40px;
+      }
+      .edit{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    .subTitle {
+      //      margin-bottom: 10px;
+      font-size: @fs-small;
+      color: @c-gray;
+    }
+    .price {
+      font-size: @fs-default;
+      color: @c-green-dark;
+    }
+    .price2{
+      margin-left: 5px;
+      font-size: @fs-small;
+      color: @c-gray;
+      text-decoration: line-through;
+    }
+    .ft {
+      position: relative;
+      height: 32px;
+      line-height: 32px;
+      .mod-goodsCount{
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .mod-card {
+    //    border: 1px solid @c-green-dark;
+    //    border-radius: 3px;
+    box-shadow: 0 0 2px darken(@c-gray, 10%);
+    .info {
+      padding: 10px;
+      .title {
+        font-size: @fs-large-x;
+      }
+    }
+  }
+}
+
+
+/* 商品数量加减 */
+.mod-goodsCount{
+  display: inline-block;
+  overflow: hidden;
+  &.show span{
+    display: block;
+  }
+  span{
+    display: none;
+    float: left;
+    width: 30px;
+    line-height: 30px;
+    border: 1px solid @c-gray;
+    border-width: 1px 0 1px 1px;
+    text-align: center;
+    a{
+      display: block;
+    }
+  }
+  span:last-child{
+    border-right: 1px solid @c-gray;
+  }
+  .minus{}
+  .num{}
+  .plus{ display: block;}
+}

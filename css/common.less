@@ -1,0 +1,90 @@
+/* 通用样式 */
+.bg-white{
+  background-color: @c-white;
+}
+.mb-10{
+  margin-bottom: 10px;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+.p10{
+  padding: 10px;
+}
+
+
+.content {
+  position: relative;
+}
+
+.scroll-content {
+  position: absolute;
+  z-index: @zindex-low;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  margin-top: -1px;
+  padding-top: 1px;
+  margin-bottom: -1px;
+  width: auto;
+  height: auto;
+  overflow-y: auto;
+  &.has-footer {
+    bottom: 50px;
+  }
+  &.has-header {
+    top: 45px;
+  }
+}
+
+.sideBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 70px;
+//  border-right: 1px solid @c-gray-light;
+  background: @c-gray-light;
+  &.has-footer {
+    bottom: 50px;
+  }
+  li{
+    border-bottom: 1px solid @c-gray;
+    a{
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      font-size: @fs-small;
+    }
+    &.active{
+      position: relative;
+      width: 70px;
+      right: 0;
+//      border-right: 1px solid red;
+      background-color: @c-white;
+    }
+  }
+}
+
+.mainCnt {
+  left: 70px;
+  background-color: @c-white;
+}
+
+.badge {
+  background-color: transparent;
+  color: @c-white;
+  z-index: 1;
+  display: inline-block;
+  padding: 2px 6px;
+  min-width: 10px;
+  border-radius: 10px;
+  vertical-align: baseline;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+}

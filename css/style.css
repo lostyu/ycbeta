@@ -1,0 +1,30 @@
+/* bar */
+.bar.bar-coffe {
+  border-color: #e0be60;
+  background-color: #593d1d;
+  color: #ffeb9c;
+}
+.bar.bar-coffe.bar-footer {
+  background-color: #593d1d;
+}
+.bar.bar-coffe .title {
+  color: #ffeb9c;
+}
+/* color */
+.coffe,
+a.coffe {
+  color: #593d1d;
+}
+.coffe-bg {
+  background-color: #593d1d;
+}
+.coffe-border {
+  border-color: #593d1d;
+}
+/* content */
+.scroll-content {
+  overflow-y: auto;
+}
+.has-tabs-bottom {
+  bottom: 49px;
+}

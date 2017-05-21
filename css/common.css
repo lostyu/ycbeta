@@ -1,0 +1,36 @@
+/* 通用样式 */
+.content {
+  position: relative;
+}
+.scroll-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  margin-top: -1px;
+  padding-top: 1px;
+  margin-bottom: -1px;
+  width: auto;
+  height: auto;
+  overflow-y: auto;
+}
+.scroll-content.has-footer {
+  bottom: 50px;
+}
+.badge {
+  background-color: transparent;
+  color: #AAA;
+  z-index: 1;
+  display: inline-block;
+  padding: 3px 8px;
+  min-width: 10px;
+  border-radius: 10px;
+  vertical-align: baseline;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
